@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_6/admin_screen/adminPage.dart';
+import 'package:flutter_application_6/app_information.dart';
 import 'package:flutter_application_6/category_item.dart';
 import 'package:flutter_application_6/catgories_screen.dart';
 import 'package:flutter_application_6/login_screen.dart';
@@ -52,6 +53,15 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.question_answer_sharp),
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => app_Information()));
+        },
+      ),
       appBar: AppBar(
         backgroundColor: Colors.red,
         title: Text(
@@ -78,7 +88,7 @@ class _LoginState extends State<Login> {
                 key: formKey,
                 child: Column(children: [
                   Padding(
-                    padding: EdgeInsets.fromLTRB(15, 50, 15, 10),
+                    padding: EdgeInsets.fromLTRB(15, 0, 15, 10),
                     child: TextFormField(
                       controller: _email,
                       validator: (value) {
@@ -117,7 +127,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(30, 15, 30, 10),
+                    padding: EdgeInsets.fromLTRB(30, 35, 30, 10),
                     child: ElevatedButton(
                       child: Container(
                         // ignore: prefer_const_constructors

@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Schyler',
                 fontWeight: FontWeight.bold,
               )),
+              
         ),
         home: AnimatedSplashScreen(
           duration: 1000,
