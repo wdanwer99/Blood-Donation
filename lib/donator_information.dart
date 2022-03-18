@@ -7,9 +7,9 @@ class donatorInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('information'),
+        title: const Text('information'),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Informations provided'),
       ),
     );

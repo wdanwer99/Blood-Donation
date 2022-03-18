@@ -162,19 +162,23 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                    color: Colors.grey.shade800,
+                    color: Colors.grey.shade600,
                     blurRadius: 8,
                     offset: Offset(5, 5))
               ],
               color: Colors.grey.shade100,
-              borderRadius: BorderRadius.circular(8)),
+              borderRadius: BorderRadius.circular(25)),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Center(
-                  child: Text(
-                '   ' + name,
+              Text(
+                '  ' + name,
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
-              )),
+              ),
+              Text(
+                '   ' + bloodType + '   ',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+              ),
             ],
           ),
         ),
